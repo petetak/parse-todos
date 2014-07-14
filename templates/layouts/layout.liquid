@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Parse JavaScript Todo App</title>
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        {{ "todos.css" | asset_url | stylesheet_tag }}
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- Content block, child page inject content -->
+            {% block content %}{% endblock %}
+        </div>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+        {{ "todos.js" | asset_url | script_tag }}
+    </body>
+</html>
